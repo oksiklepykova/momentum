@@ -18,7 +18,7 @@ function showDate() {
     const options = { weekday: 'long', month: 'long', day: 'numeric'};
     const currentDate = date.toLocaleDateString('en-US', options);
     document.querySelector("#date").textContent = currentDate;
-    console.log(currentDate);
+   // console.log(currentDate);
     
 }
 showDate();
@@ -79,14 +79,14 @@ showGreeting();
 
  const body = document.querySelector("body");
  body.style.backgroundImage = "url('https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/evening/18.jpg')";
- console.log(body.style)
-
+// console.log(body.style)
+/*
  function getrandomNum(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
   
- }
+ }*/
 
 
 
