@@ -20,27 +20,27 @@ let track = document.createElement('audio');
 const playList = [
 {
    name: "fool me once",
-   path: "../assets/music/song1.mp3",
+   path: "./assets/music/song1.mp3",
    singer: "Olivia Addams"
 },
 {
    name: "Crazy land",
-   path: "../assets/music/song2.mp3",
+   path: "./assets/music/song2.mp3",
    singer: "Christos Stylianou"
 },
 {
    name: "asereje",
-   path: "../assets/music/song3.mp3",
+   path: "./assets/music/song3.mp3",
    singer: "dj quba"
 },
 {
    name: "up",
-   path: "../assets/music/song4.mp3",
+   path: "./assets/music/song4.mp3",
    singer: "inna"
 },
 {
    name: "I'm good",
-   path: "../assets/music/song5.mp3",
+   path: "./assets/music/song5.mp3",
    singer: "david guetta"
 }
 ];
