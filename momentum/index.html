@@ -1,1 +1,79 @@
-Hello!
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" href="css/owfont-regular.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>momentum</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container-header">
+            <div class="controls">
+                <div class="show-song">
+                    <p id="present">1</p>
+                    <p>/</p>
+                    <p id="total">5</p>
+                </div>
+                <p id="title">title.mp3</p>
+                <p id="artist">Artist name</p>
+
+                <!--- middle part-->
+
+                <div class="middle">
+                    <button onclick="previousSong()" id="pre"><i class='bx bx-skip-previous'></i></button>
+                    <button onclick="justPlay()" id="play"><i class='bx bx-play'></i></button>
+                    <button onclick="nextSong()" id="next"><i class='bx bx-skip-next'></i></button>
+                </div>
+
+                <!-- song duration part-->
+                <button id="auto" onclick="autoplaySwitch()">Auto play<i class='bx bx-loader-circle'></i></button>
+                <div class="duration">
+                    <input type="range" min="" 0 max="100" id="slider" value="0" id="duration-slider"
+                        onchange="changeDuration()">
+                </div>
+            </div>
+            <div class="weather">
+                <input type="text" class="city" value="Lviv">
+                <i class="weather-icon owf owf-800"></i>
+                <div class="weather-description">
+                    <span class="temperature"></span>
+                    <span class="description"></span>
+                </div>
+                <div>Wind: <span class="wind"></span> m/s</div>
+                <div>Humidity: <span class="humidity"></span>%</div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="slider">
+            <button class="slider-prev slider-icon">&lt</button>
+            <button class="slider-next slider-icon">&gt</button>
+        </div>
+        <h1 id="time"></h1>
+        <h3 id="date"></h3>
+        <div class="welcome-container">
+            <span class="welcome">Good morning</span>
+            <input type="text" class="name" placeholder="[Enter name]">
+        </div>
+    </main>
+    <footer class="footer">
+        <div>
+            <div id="quote"></div>
+            <div id="author"></div>
+        </div>
+        <button class="change"></button>
+    </footer>
+    <script src="./index.js"></script>
+    <script src="./generator.js"></script>
+    <script src="./weather.js"></script>
+    <script src="./play.js"></script>
+</body>
+
+</html>
