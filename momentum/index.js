@@ -24,13 +24,18 @@ function showDate() {
 showDate();
 
 
+
  function showGreeting() {
+/*
+  const timeOfDay = getTimeOfDay();
+  const greetingText = `Good ${timeOfDay}`;  */
+
   function getTimeOfDay(){
    const hours = new Date().getHours();
  
  let greetingText = "";
 
-//  if (hours < 12) {
+
 
   if ( 6 <= hours && hours < 12) {
   greetingText = "Good morning"; 
@@ -80,13 +85,48 @@ showGreeting();
  const body = document.querySelector("body");
  body.style.backgroundImage = "url('https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/evening/18.jpg')";
 // console.log(body.style)
-/*
+const sliderPrev = document.querySelector(".slider-prev");
+const sliderNext = document.querySelector(".slider-next");
+let randomNum = getrandomNum(1, 20);
+let timeOfDay = "";
+
  function getrandomNum(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+    return Math.floor(Math.random() * (max - min + 1) + min);
   
- }*/
+ }
+
+ function setBg() {
+  let bgNum = randomNum.toString().padStart(2, '0');
+  const img = new Image();
+  img.src = `https://raw.githubusercontent.com/oksiklepykova/stage1-task/assets/images/evening/${bgNum}.webp`;
+  img.onload = () => {
+    document.body.style.backgroundImage = `url(${img.src})`;
+  }
+
+}
+setBg();
+
+function getSlideNext() {
+    if(randomNum < 20) {
+        randomNum ++
+    }
+    else if (randomNum === 20) {
+        randomNum = 1
+    } 
+    setBg ()
+}
+sliderNext.addEventListener('click', getSlideNext)
+
+function getSlidePrev() {
+    if (randomNum > 1) {
+        randomNum --
+    }
+    else if (randomNum === 1) {
+        randomNum = 20
+    } 
+    setBg ()
+}
+sliderPrev.addEventListener('click', getSlidePrev);
 
 
 
