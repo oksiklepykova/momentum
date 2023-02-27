@@ -24,13 +24,18 @@ function showDate() {
 showDate();
 
 
+
  function showGreeting() {
+/*
+  const timeOfDay = getTimeOfDay();
+  const greetingText = `Good ${timeOfDay}`;  */
+
   function getTimeOfDay(){
    const hours = new Date().getHours();
  
  let greetingText = "";
 
-//  if (hours < 12) {
+
 
   if ( 6 <= hours && hours < 12) {
   greetingText = "Good morning"; 
@@ -93,12 +98,13 @@ let timeOfDay = "";
  function setBg() {
   let bgNum = randomNum.toString().padStart(2, '0');
   const img = new Image();
-  img.src = `https://raw.githubusercontent.com/oksiklepykova/stage1-task/tree/assets/images/${timeOfDay}/${bgNum}.jpg`;
+  img.src = `https://raw.githubusercontent.com/oksiklepykova/stage1-task/assets/images/evening/${bgNum}.webp`;
   img.onload = () => {
     document.body.style.backgroundImage = `url(${img.src})`;
   }
 
 }
+setBg();
 
 function getSlideNext() {
     if(randomNum < 20) {
